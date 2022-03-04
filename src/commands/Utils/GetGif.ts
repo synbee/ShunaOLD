@@ -25,8 +25,8 @@ export default class Command extends BaseCommand {
 		{ joined }: IParsedArgs
 	): Promise<void> => {
 		if (!this.client.config.gifApi)
-			return void M.reply("No key set for searching gifs. ");
-		if (!joined) return void (await M.reply(`GIve me a search term, Baka!`));
+			return void M.reply("𝑁𝑜 𝑘𝑒𝑦 𝑠𝑒𝑡 𝑓𝑜𝑟 𝑠𝑒𝑎𝑟𝑐ℎ𝑖𝑛𝑔 𝑔𝑖𝑓𝑠. ");
+		if (!joined) return void (await M.reply(`𝑃𝑙𝑒𝑎𝑠𝑒 𝑝𝑟𝑜𝑣𝑖𝑑𝑒 𝑚𝑒 𝑎 𝑠𝑒𝑎𝑟𝑐ℎ 𝑡𝑒𝑟𝑚!`));
 		const search = joined.trim();
 		const gif = await axios
 			.get(
@@ -34,9 +34,9 @@ export default class Command extends BaseCommand {
 			)
 			.catch(() => null);
 		if (!gif)
-			return void (await M.reply(`Couldn't find any matching gif term.`));
+			return void (await M.reply(`𝐺𝑖𝑓 𝑛𝑜𝑡 𝑓𝑜𝑢𝑛𝑑.`));
 		const i = Math.floor(Math.random() * gif.data.results.length);
-		const caption = "🌟 Here you go.";
+		const caption = "🌺 𝑯𝒆𝒓𝒆...";
 		return void M.reply(
 			await request.buffer(gif.data.results[i].media[0].mp4.url),
 			MessageType.video,
