@@ -25,7 +25,7 @@ export default class Command extends BaseCommand {
     const term = joined.trim();
     const { videos } = await yts(term);
     if (!videos || videos.length <= 0)
-      return void M.reply(`⚓ No Matching videos found for : *${term}*`);
+      return void M.reply(`⚓ 𝑵𝒐 𝒎𝒂𝒕𝒄𝒉𝒊𝒏𝒈 𝒗𝒊𝒅𝒆𝒐𝒔 𝒇𝒐𝒖𝒏𝒅 𝒇𝒐𝒓 : *${term}*`);
     const length = videos.length < 10 ? videos.length : 10;
     let text = `🔎 *Results for ${term}*\n`;
     for (let i = 0; i < length; i++) {
@@ -33,14 +33,14 @@ export default class Command extends BaseCommand {
         videos[i].author.name
       }\n 📙 *Duration:* ${videos[i].duration}\n📘 *URL:* ${videos[i].url}\n\n`;
     }
-    M.reply("🌟 Searching...");
+    M.reply("🌸 𝐒𝐞𝐚𝐫𝐜𝐡𝐢𝐧𝐠...");
     this.client
       .sendMessage(M.from, text, MessageType.extendedText, {
         quoted: M.WAMessage,
         contextInfo: {
           externalAdReply: {
             title: `Search Term: ${term}`,
-            body: `🌟 Chitoge 🌟`,
+            body: `🌺 𝐒𝐇𝐔𝐍𝐀 🌺`,
             mediaType: 2,
             thumbnail: await this.client.getBuffer(videos[0].thumbnail),
             mediaUrl: videos[0].url,
