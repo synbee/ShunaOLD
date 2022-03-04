@@ -23,14 +23,14 @@ export default class Command extends BaseCommand {
     const type = joined.trim().toLowerCase() as toggleableGroupActions;
     if (!Object.values(toggleableGroupActions).includes(type))
       return void M.reply(
-        `🟥 Invalid Option: *${this.client.util.capitalize(type)}*`
+        `🟥 𝐈𝐧𝐯𝐚𝐥𝐢𝐝 𝐎𝐩𝐭𝐢𝐨𝐧: *${this.client.util.capitalize(type)}*`
       );
     const data = await this.client.getGroupData(M.from);
     if (data[type])
       return void M.reply(
         `🟨 *${this.client.util.capitalize(
           type
-        )}* is already *activated, Baka!*`
+        )}* 𝐈𝐬 𝐚𝐥𝐫𝐞𝐚𝐝𝐲 *𝐚𝐜𝐭𝐢𝐯𝐚𝐭𝐞𝐝, !*`
       );
     if (type === "news") {
       await this.client.DB.group.updateOne(
@@ -42,7 +42,7 @@ export default class Command extends BaseCommand {
         { $push: { jids: M.from } }
       );
       return void M.reply(
-        `🟩 *${this.client.util.capitalize(type)}* is now active`
+        `🟩 *${this.client.util.capitalize(type)}* 𝐢𝐬 𝐧𝐨𝐰 𝐚𝐜𝐭𝐢𝐯𝐞`
       );
     }
     await this.client.DB.group.updateOne(
@@ -50,7 +50,7 @@ export default class Command extends BaseCommand {
       { $set: { [type]: true } }
     );
     return void M.reply(
-      `🟩 *${this.client.util.capitalize(type)}* is now active`
+      `🟩 *${this.client.util.capitalize(type)}* 𝐢𝐬 𝐧𝐨𝐰 𝐚𝐜𝐭𝐢𝐯𝐞`
     );
   };
 }
