@@ -18,11 +18,11 @@ export default class Command extends BaseCommand {
     }
 
     run = async (M: ISimplifiedMessage, { joined }: IParsedArgs): Promise<void> => {
-        if (!joined) return void M.reply('Please provide a search term')
+        if (!joined) return void M.reply('𝑃𝑙𝑒𝑎𝑠𝑒 𝑔𝑖𝑣𝑒 𝑚𝑒 𝑎 𝑠𝑒𝑎𝑟𝑐ℎ 𝑡𝑒𝑟𝑚')
         const term = joined.trim()
         const { videos } = await yts(term + ' karaoke song')
-        if (!videos || videos.length <= 0) return void M.reply(`No Matching videos found for the term *${term}*`)
-        const text = `🌟 Here you go 🌟`
+        if (!videos || videos.length <= 0) return void M.reply(`𝑇ℎ𝑒𝑟𝑒'𝑠 𝑛𝑜 𝑚𝑎𝑡𝑐ℎ𝑖𝑛𝑔 𝑣𝑖𝑑𝑒𝑜𝑠 𝑓𝑜𝑢𝑛𝑑 𝑓𝑜𝑟 𝑡ℎ𝑒 𝑡𝑒𝑟𝑚 *${term}*`)
+        const text = `🌸 𝐅𝐨𝐫 𝐘𝐨𝐮 𝐁𝐲 𝐒𝐡𝐮𝐧𝐚 🌸`
 
         this.client
             .sendMessage(M.from, text, MessageType.extendedText, {
@@ -30,7 +30,7 @@ export default class Command extends BaseCommand {
                 contextInfo: {
                     externalAdReply: {
                         title: `Search Term: ${term}`,
-                        body: `🌟 Chitoge 🌟`,
+                        body: `🌺 𝐒𝐇𝐔𝐍𝐀 🌺`,
                         mediaType: 2,
                         thumbnailUrl: videos[0].thumbnail,
                         mediaUrl: videos[0].url
