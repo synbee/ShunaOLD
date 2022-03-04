@@ -47,7 +47,7 @@ export default class Command extends BaseCommand {
 			const pack = parsedArgs.joined.split("|");
 			if (!pack[1])
 				return void M.reply(
-					`𝑮𝒊𝒗𝒆 𝒎𝒆 𝒕𝒉𝒆 𝒏𝒆𝒘 𝒏𝒂𝒎𝒆 𝒂𝒏𝒅 𝒂𝒖𝒕𝒉𝒐𝒓 𝒐𝒇 𝒕𝒉𝒆 𝒔𝒕𝒊𝒄𝒌𝒆𝒓!\nExample: ${this.client.config.prefix}steal | By | S H U N A`
+					`𝑮𝒊𝒗𝒆 𝒎𝒆 𝒕𝒉𝒆 𝒏𝒆𝒘 𝒏𝒂𝒎𝒆 𝒂𝒏𝒅 𝒂𝒖𝒕𝒉𝒐𝒓 𝒐𝒇 𝒕𝒉𝒆 𝒔𝒕𝒊𝒄𝒌𝒆𝒓!\n𝐄𝐱𝐚𝐦𝐩𝐥𝐞: ${this.client.config.prefix}steal | By | S H U N A`
 				);
 			const filename = `${tmpdir()}/${Math.random().toString(36)}`;
 			const getQuality = (): number => {
