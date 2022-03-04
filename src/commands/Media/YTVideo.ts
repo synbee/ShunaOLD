@@ -20,13 +20,13 @@ export default class Command extends BaseCommand {
   run = async (M: ISimplifiedMessage): Promise<void> => {
     if (!M.urls.length)
       return void M.reply(
-        "🔎 Provide the URL of the YT video you want to download"
+        "🔎 𝑃𝑟𝑜𝑣𝑖𝑑𝑒 𝑡ℎ𝑒 𝑈𝑅𝐿 𝑜𝑓 𝑡ℎ𝑒 𝑌𝑇 𝑣𝑖𝑑𝑒𝑜 𝑦𝑜𝑢 𝑤𝑎𝑛𝑡 𝑡𝑜 𝑑𝑜𝑤𝑛𝑙𝑜𝑎𝑑"
       );
     const video = new YT(M.urls[0], "video");
     if (!video.validateURL()) return void M.reply(`Provide a Valid YT URL`);
     const { videoDetails } = await video.getInfo();
     if (Number(videoDetails.lengthSeconds) > 1800)
-      return void M.reply("⚓ Cannot download videos longer than 30 minutes");
+      return void M.reply("⚓ 𝐶𝑎𝑛𝑛𝑜𝑡 𝑑𝑜𝑤𝑛𝑙𝑜𝑎𝑑 𝑣𝑖𝑑𝑒𝑜𝑠 𝑙𝑜𝑛𝑔𝑒𝑟 𝑡ℎ𝑎𝑛 30 𝑚𝑖𝑛𝑢𝑡𝑒𝑠");
     M.reply(await video.getBuffer(), MessageType.video).catch((reason: Error) =>
       M.reply(`✖ An error occurred, Reason: ${reason}`)
     );
