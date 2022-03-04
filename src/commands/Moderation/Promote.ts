@@ -28,7 +28,7 @@ export default class Command extends BaseCommand {
         M.mentioned.forEach(async (user) => {
             const usr = this.client.contacts[user]
             const username = usr.notify || usr.vname || usr.name || user.split('@')[0]
-            if (M.groupMetadata?.admins?.includes(user)) M.reply(`✖ Skipped *${username}* 𝑎𝑠 𝑡ℎ𝑒𝑦'𝑟𝑒 𝑎𝑙𝑟𝑒𝑎𝑑𝑦 𝑎𝑛 𝑎𝑑𝑚𝑖𝑛`)
+            if (M.groupMetadata?.admins?.includes(user)) M.reply(`✖ 𝑆𝑘𝑖𝑝𝑝𝑒𝑑 *${username}* 𝑎𝑠 𝑡ℎ𝑒𝑦'𝑟𝑒 𝑎𝑙𝑟𝑒𝑎𝑑𝑦 𝑎𝑛 𝑎𝑑𝑚𝑖𝑛`)
             else {
                 await this.client.groupMakeAdmin(M.from, [user])
                 M.reply(`👑 𝑺𝒖𝒄𝒄𝒆𝒔𝒔𝒇𝒖𝒍𝒍𝒚 𝑷𝒓𝒐𝒎𝒐𝒕𝒆𝒅 *${username}*`)
