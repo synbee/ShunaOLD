@@ -45,7 +45,7 @@ export default class Command extends BaseCommand {
 			.map((jids) => (jids.includes("g.us") ? jids : null))
 			.filter((v) => v);
 		for (let i = 0; i < chats.length; i++) {
-			const text = `*🌸「 𝐒𝐇𝐔𝐍𝐀 𝐁𝐑𝐎𝐀𝐃𝐂𝐀𝐒𝐓 」🌸*\n\n${term}\n\n Regards ~ *${M.sender.username}*`;
+			const text = `*🌸「 𝐒𝐇𝐔𝐍𝐀 𝐁𝐑𝐎𝐀𝐃𝐂𝐀𝐒𝐓 」🌸*\n\n${term}\n\n 𝐑𝐞𝐠𝐚𝐫𝐝𝐬 ~ *${M.sender.username}*`;
 			this.client.sendMessage(chats[i], { url: selected }, MessageType.image, {
 				caption: `${text}`,
 				contextInfo: {
