@@ -35,10 +35,10 @@ export default class Command extends BaseCommand {
                     return void M.reply(res.data.cnt)
                 })
                 .catch(() => {
-                    M.reply(`Intriguing...`)
+                    M.reply(`𝑰'𝒎 𝒉𝒆𝒓𝒆...`)
                 })
         } else {
-            M.reply(`Chat Bot Url not set.`)
+            M.reply(`𝑪𝒉𝒂𝒕 𝑩𝒐𝒕 𝑼𝒓𝒍 𝒏𝒐𝒕 𝒔𝒆𝒕.`)
         }
     }
 }
