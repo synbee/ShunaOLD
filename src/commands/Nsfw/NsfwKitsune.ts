@@ -26,7 +26,7 @@ export default class Command extends BaseCommand {
 		const { data } = await axios.get("https://nekos.life/api/v2/img/lewdk");
 		if (!(await this.client.getGroupData(M.from)).nsfw)
 			return void M.reply(
-				`Don't be a pervert, Baka! This is not an NSFW group.`
+				`𝐏𝐞𝐫𝐯𝐞𝐫𝐭! 𝐆𝐨 𝐒𝐨𝐦𝐞𝐰𝐡𝐞𝐫𝐞 𝐄𝐥𝐬𝐞.`
 			);
 		const buffer = await request.buffer(data.url).catch((e) => {
 			return void M.reply(e.message);
