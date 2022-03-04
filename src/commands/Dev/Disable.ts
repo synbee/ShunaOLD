@@ -19,17 +19,17 @@ export default class Command extends BaseCommand {
     run = async (M: ISimplifiedMessage, { joined }: IParsedArgs): Promise<void> => {
         const split = joined.split('|')
         const key = split[0].toLowerCase().trim()
-        if (!key) return void (await M.reply(`Provide the command you want to disable`))
+        if (!key) return void (await M.reply(`𝑃𝑟𝑜𝑣𝑖𝑑𝑒 𝑡ℎ𝑒 𝑐𝑜𝑚𝑚𝑎𝑛𝑑 𝑦𝑜𝑢 𝑤𝑎𝑛𝑡 𝑡𝑜 𝑑𝑖𝑠𝑎𝑏𝑙𝑒`))
         const command = this.handler.commands.get(key) || this.handler.aliases.get(key)
-        if (!command) return void (await M.reply(`No command found`))
+        if (!command) return void (await M.reply(`𝑁𝑜 𝑐𝑜𝑚𝑚𝑎𝑛𝑑 𝑓𝑜𝑢𝑛𝑑`))
         if (await this.client.DB.disabledcommands.findOne({ command: command.config.command }))
-            return void M.reply(`${command.config.command} is already disabled`)
+            return void M.reply(`${command.config.command} 𝑖𝑠 𝑎𝑙𝑟𝑒𝑎𝑑𝑦 𝑑𝑖𝑠𝑎𝑏𝑙𝑒𝑑`)
         await new this.client.DB.disabledcommands({
             command: command.config.command,
             reason: (split[1] || '').trim() || ''
         }).save()
         await M.reply(
-            `*${this.client.util.capitalize(command.config.command)}* is now Disabled${
+            `*${this.client.util.capitalize(command.config.command)}* 𝑖𝑠 𝑛𝑜𝑤 𝐷𝑖𝑠𝑎𝑏𝑙𝑒𝑑${
                 split[1] ? ` for ${split[1]}` : ''
             }`
         )
