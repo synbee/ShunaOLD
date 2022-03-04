@@ -35,7 +35,7 @@ export default class Command extends BaseCommand {
 			.catch(() => null);
 		if (!wallpaper)
 			return void (await M.reply(
-				`Couldn't find any matching term of wallpaper.`
+				`𝘊𝘰𝘶𝘭𝘥𝘯'𝘵 𝘧𝘪𝘯𝘥 𝘢𝘯𝘺 𝘮𝘢𝘵𝘤𝘩𝘪𝘯𝘨 𝘵𝘦𝘳𝘮 𝘰𝘧 𝘸𝘢𝘭𝘭𝘱𝘢𝘱𝘦𝘳.`
 			));
 		const i = Math.floor(Math.random() * wallpaper.length);
 		const buffer = await request.buffer(wallpaper[i].image).catch((e) => {
@@ -44,23 +44,23 @@ export default class Command extends BaseCommand {
 		while (true) {
 			try {
 				M.reply(
-					buffer || "✖ An error occurred. Please try again later.",
+					buffer || "✖ 𝐴𝑛 𝑒𝑟𝑟𝑜𝑟 𝑜𝑐𝑐𝑢𝑟𝑟𝑒𝑑. 𝑃𝑙𝑒𝑎𝑠𝑒 𝑡𝑟𝑦 𝑎𝑔𝑎𝑖𝑛 𝑙𝑎𝑡𝑒𝑟.",
 					MessageType.image,
 					undefined,
 					undefined,
-					`*🌟 Here you go.*`,
+					`*🌺 𝐇𝐞𝐫𝐞 𝐲𝐚 𝐠𝐨!*`,
 					undefined
 				).catch((e) => {
 					console.log(
 						`This error occurs when an image is sent via M.reply()\n Child Catch Block : \n${e}`
 					);
 					// console.log('Failed')
-					M.reply(`✖ An error occurred. Please try again later.`);
+					M.reply(`✖ 𝐴𝑛 𝑒𝑟𝑟𝑜𝑟 𝑜𝑐𝑐𝑢𝑟𝑟𝑒𝑑. 𝑃𝑙𝑒𝑎𝑠𝑒 𝑡𝑟𝑦 𝑎𝑔𝑎𝑖𝑛 𝑙𝑎𝑡𝑒𝑟.`);
 				});
 				break;
 			} catch (e) {
 				// console.log('Failed2')
-				M.reply(`✖ An error occurred. Please try again later.`);
+				M.reply(`✖ 𝐴𝑛 𝑒𝑟𝑟𝑜𝑟 𝑜𝑐𝑐𝑢𝑟𝑟𝑒𝑑. 𝑃𝑙𝑒𝑎𝑠𝑒 𝑡𝑟𝑦 𝑎𝑔𝑎𝑖𝑛 𝑙𝑎𝑡𝑒𝑟.`);
 				console.log(
 					`This error occurs when an image is sent via M.reply()\n Parent Catch Block : \n${e}`
 				);
