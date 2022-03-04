@@ -48,7 +48,7 @@ export default class Command extends BaseCommand {
 			],
 			undefined,
 			undefined,
-			"🌟 𝐇𝐞𝐫𝐞..."
+			"🌺 𝐇𝐞𝐫𝐞..."
 		);
 	};
 }
