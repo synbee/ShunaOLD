@@ -33,7 +33,7 @@ export default class Command extends BaseCommand {
 				?.imageMessage
 		)
 			return void M.reply(
-				'Quote the "viewOnceMessage" that you want to retrieve'
+				'𝐐𝐮𝐨𝐭𝐞 𝐭𝐡𝐞 "𝐯𝐢𝐞𝐰𝐎𝐧𝐜𝐞𝐌𝐞𝐬𝐬𝐚𝐠𝐞" 𝐭𝐡𝐚𝐭 𝐲𝐨𝐮 𝐰𝐚𝐧𝐭 𝐭𝐨 𝐫𝐞𝐭𝐫𝐢𝐞𝐯𝐞'
 			);
 		return void M.reply(
 			await this.client.downloadMediaMessage(
@@ -48,7 +48,7 @@ export default class Command extends BaseCommand {
 			],
 			undefined,
 			undefined,
-			"🌟 Here you go."
+			"🌟 𝐇𝐞𝐫𝐞..."
 		);
 	};
 }
