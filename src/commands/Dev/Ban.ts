@@ -21,7 +21,7 @@ export default class Command extends BaseCommand {
             : [M.sender.jid, this.client.user.jid]
 
         if (M.quoted?.sender) M.mentioned.push(M.quoted.sender)
-        if (!M.mentioned.length || !M.mentioned[0]) return void M.reply('Mention the user whom you want to ban')
+        if (!M.mentioned.length || !M.mentioned[0]) return void M.reply('𝑀𝑒𝑛𝑡𝑖𝑜𝑛 𝑡ℎ𝑒 𝑢𝑠𝑒𝑟 𝑤ℎ𝑜𝑚 𝑦𝑜𝑢 𝑤𝑎𝑛𝑡 𝑡𝑜 𝑏𝑎𝑛')
         let text = '*STATE*\n\n'
         // declare tagged as (string | undefined) []
         // const tagged : (string | undefined)[] = []
