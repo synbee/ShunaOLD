@@ -17,16 +17,16 @@ export default class Command extends BaseCommand {
 
     run = async (M: ISimplifiedMessage): Promise<void> => {
         if (!M.groupMetadata?.admins?.includes(this.client.user.jid))
-            return void M.reply(`How can I demote someone without being an admin?`)
+            return void M.reply(`𝐻𝑜𝑤 𝑐𝑎𝑛 𝐼 𝑑𝑒𝑚𝑜𝑡𝑒 𝑠𝑜𝑚𝑒𝑜𝑛𝑒 𝑤𝑖𝑡ℎ𝑜𝑢𝑡 𝑏𝑒𝑖𝑛𝑔 𝑎𝑛 𝑎𝑑𝑚𝑖𝑛?`)
         if (M.quoted?.sender) M.mentioned.push(M.quoted.sender)
-        if (!M.mentioned.length) return void M.reply(`Tag the users you want to ${this.config.command}`)
+        if (!M.mentioned.length) return void M.reply(`𝑇𝑎𝑔 𝑡ℎ𝑒 𝑢𝑠𝑒𝑟𝑠 𝑦𝑜𝑢 𝑤𝑎𝑛𝑡 𝑡𝑜 ${this.config.command}`)
         M.mentioned.forEach(async (user) => {
             const usr = this.client.contacts[user]
             const username = usr.notify || usr.vname || usr.name || user.split('@')[0]
-            if (!M.groupMetadata?.admins?.includes(user)) M.reply(`✖ Skipped *${username}* as they're not an admin`)
+            if (!M.groupMetadata?.admins?.includes(user)) M.reply(`✖ 𝑆𝑘𝑖𝑝𝑝𝑒𝑑 *${username}* 𝑎𝑠 𝑡ℎ𝑒𝑦'𝑟𝑒 𝑛𝑜𝑡 𝑎𝑛 𝑎𝑑𝑚𝑖𝑛`)
             else if (user !== this.client.user.jid) {
                 await this.client.groupDemoteAdmin(M.from, [user])
-                M.reply(`➰ Successfully Demoted *${username}*`)
+                M.reply(`🔻 𝑺𝒖𝒄𝒄𝒆𝒔𝒔𝒇𝒖𝒍𝒍𝒚 𝑫𝒆𝒎𝒐𝒕𝒆𝒅 *${username}*`)
             }
         })
     }
