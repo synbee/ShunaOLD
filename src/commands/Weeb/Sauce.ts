@@ -35,26 +35,26 @@ export default class Command extends BaseCommand {
 		if (!buffer) return void M.reply(`Give me an image/gif to search, Baka!`);
 		const api = new TraceMoe();
 		const sauce = await api.fetchAnimeFromBuffer(buffer).catch((err: any) => {
-			return void M.reply(`Couldn't find any matching results.`);
+			return void M.reply(`𝐶𝑜𝑢𝑙𝑑𝑛'𝑡 𝑓𝑖𝑛𝑑 𝑎𝑛𝑦 𝑚𝑎𝑡𝑐ℎ𝑖𝑛𝑔 𝑟𝑒𝑠𝑢𝑙𝑡𝑠.`);
 		});
 		const Anilist = new anilist();
 		const details = await Anilist.media.anime(sauce.result[0].anilist);
 		const similarity = sauce.result[0].similarity;
 		let sentence;
 		if (similarity < 0.85) {
-			sentence = `Ahh... I have low confidence in this one but please take a look.`;
+			sentence = `𝐴ℎℎ... 𝐼 ℎ𝑎𝑣𝑒 𝑙𝑜𝑤 𝑐𝑜𝑛𝑓𝑖𝑑𝑒𝑛𝑐𝑒 𝑖𝑛 𝑡ℎ𝑖𝑠 𝑜𝑛𝑒 𝑏𝑢𝑡 𝑝𝑙𝑒𝑎𝑠𝑒 𝑡𝑎𝑘𝑒 𝑎 𝑙𝑜𝑜𝑘.`;
 		} else {
-			sentence = `I have super confidence in this one. Take a look at the results.`;
+			sentence = `𝐼 ℎ𝑎𝑣𝑒 𝑠𝑢𝑝𝑒𝑟 𝑐𝑜𝑛𝑓𝑖𝑑𝑒𝑛𝑐𝑒 𝑖𝑛 𝑡ℎ𝑖𝑠 𝑜𝑛𝑒. 𝑇𝑎𝑘𝑒 𝑎 𝑙𝑜𝑜𝑘 𝑎𝑡 𝑡ℎ𝑒 𝑟𝑒𝑠𝑢𝑙𝑡𝑠.`;
 		}
 		let text = "";
 		text += `*${sentence}*\n\n`;
-		text += `🎀 *Title: ${details.title.romaji}*\n`;
-		text += `🎗 *Episode: ${sauce.result[0].episode}*\n`;
-		text += `💠 *Similarity: ${sauce.result[0].similarity} / 1*\n`;
-		text += `💮 *Genres: ${details.genres}*\n`;
-		text += `🎋 *Type: ${details.format}*\n`;
-		text += `📈 *Status: ${details.status}*\n\n`;
-		text += `🌐 *URL: ${details.siteUrl}*`;
+		text += `🌺 *𝐓𝐢𝐭𝐥𝐞: ${details.title.romaji}*\n`;
+		text += `🎗 *𝐄𝐩𝐢𝐬𝐨𝐝𝐞: ${sauce.result[0].episode}*\n`;
+		text += `💠 *𝐒𝐢𝐦𝐢𝐥𝐚𝐫𝐢𝐭𝐲: ${sauce.result[0].similarity} / 1*\n`;
+		text += `💮 *𝐆𝐞𝐧𝐫𝐞𝐬: ${details.genres}*\n`;
+		text += `🎋 *𝐓𝐲𝐩𝐞: ${details.format}*\n`;
+		text += `📈 *𝐒𝐭𝐚𝐭𝐮𝐬: ${details.status}*\n\n`;
+		text += `🌐 *𝐔𝐑𝐋: ${details.siteUrl}*`;
 		return void this.client.sendMessage(
 			M.from,
 			{ url: sauce.result[0].video },
