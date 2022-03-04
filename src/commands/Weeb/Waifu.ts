@@ -28,11 +28,11 @@ export default class Command extends BaseCommand {
         while (true) {
             try {
                 M.reply(
-                    buffer || 'Could not fetch image. Please try again later',
+                    buffer || '𝐶𝑜𝑢𝑙𝑑 𝑛𝑜𝑡 𝑓𝑒𝑡𝑐ℎ 𝑖𝑚𝑎𝑔𝑒. 𝑃𝑙𝑒𝑎𝑠𝑒 𝑡𝑟𝑦 𝑎𝑔𝑎𝑖𝑛 𝑙𝑎𝑡𝑒𝑟',
                     MessageType.image,
                     undefined,
                     undefined,
-                    `*🌟 Here you go.*\n`,
+                    `*🌺 𝐇𝐞𝐫𝐞...*\n`,
                     undefined
                 ).catch((e) => {
                     console.log(`This Error occurs when an image is sent via M.reply()\n Child Catch Block : \n${e}`)
@@ -42,7 +42,7 @@ export default class Command extends BaseCommand {
                 break
             } catch (e) {
                 // console.log('Failed2')
-                M.reply(`Could not fetch image. Here's the URL : ${data.url}`)
+                M.reply(`𝐂𝐨𝐮𝐥𝐝 𝐧𝐨𝐭 𝐟𝐞𝐭𝐜𝐡 𝐢𝐦𝐚𝐠𝐞. 𝐇𝐞𝐫𝐞'𝐬 𝐭𝐡𝐞 𝐔𝐑𝐋 : ${data.url}`)
                 console.log(`This Error occurs when an image is sent via M.reply()\n Parent Catch Block : \n${e}`)
             }
         }
