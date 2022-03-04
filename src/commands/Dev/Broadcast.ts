@@ -26,7 +26,7 @@ export default class Command extends BaseCommand {
 		{ joined }: IParsedArgs
 	): Promise<void> => {
 		if (!joined)
-			return void (await M.reply(`Please provide the Broadcast Message.`));
+			return void (await M.reply(`𝑃𝑙𝑒𝑎𝑠𝑒 𝑝𝑟𝑜𝑣𝑖𝑑𝑒 𝑡ℎ𝑒 𝐵𝑟𝑜𝑎𝑑𝑐𝑎𝑠𝑡 𝑀𝑒𝑠𝑠𝑎𝑔𝑒.`));
 		const term = joined.trim();
 		const images = [
 			"https://wallpapercave.com/wp/wp3144753.jpg",
@@ -45,7 +45,7 @@ export default class Command extends BaseCommand {
 			.map((jids) => (jids.includes("g.us") ? jids : null))
 			.filter((v) => v);
 		for (let i = 0; i < chats.length; i++) {
-			const text = `*🌟「 CHITOGE BROADCAST 」🌟*\n\n${term}\n\n Regards ~ *${M.sender.username}*`;
+			const text = `*🌸「 𝐒𝐇𝐔𝐍𝐀 𝐁𝐑𝐎𝐀𝐃𝐂𝐀𝐒𝐓 」🌸*\n\n${term}\n\n Regards ~ *${M.sender.username}*`;
 			this.client.sendMessage(chats[i], { url: selected }, MessageType.image, {
 				caption: `${text}`,
 				contextInfo: {
@@ -53,6 +53,6 @@ export default class Command extends BaseCommand {
 				},
 			});
 		}
-		await M.reply(`✅ Broadcast Message sent to *${chats.length} groups*.`);
+		await M.reply(`✅ 𝐵𝑟𝑜𝑎𝑑𝑐𝑎𝑠𝑡 𝑚𝑒𝑠𝑠𝑎𝑔𝑒 𝑠𝑒𝑛𝑡 𝑡𝑜 *${chats.length} 𝑔𝑟𝑜𝑢𝑝𝑠*.`);
 	};
 }
