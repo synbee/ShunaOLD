@@ -18,7 +18,7 @@ export default class Command extends BaseCommand {
     run = async (M: ISimplifiedMessage): Promise<void> => {
         if (M.quoted?.sender) M.mentioned.push(M.quoted.sender)
         if (!M.mentioned.length || !M.mentioned[0])
-            return void M.reply('𝑷𝒍𝒆𝒂𝒔𝒆 𝒎𝒆𝒏𝒕𝒊𝒐𝒏 𝒕𝒉𝒆 𝒖𝒔𝒆𝒓 𝒘𝒉𝒐𝒎 𝒚𝒐𝒖 𝒘𝒂𝒏𝒕 𝒕𝒐 𝒖𝒏𝒃𝒂𝒏')
+            return void M.reply('𝑾𝒉𝒐 𝒘𝒂𝒏𝒕𝒔 𝒕𝒐 𝒈𝒆𝒕 𝒃𝒂𝒏𝒏𝒆𝒅 ?')
         let text = '*𝐒𝐓𝐀𝐓𝐄*\n\n'
         for (const user of M.mentioned) {
             const data = await this.client.getUser(user)
