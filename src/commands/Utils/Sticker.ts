@@ -102,7 +102,7 @@ export default class Command extends BaseCommand {
 				const sticker = await new Sticker(buffer, getOptions())
 					.build()
 					.catch(() => null);
-				if (!sticker) return void M.reply(`An Error Occurred While Converting`);
+				if (!sticker) return void M.reply(`𝐴𝑛 𝐸𝑟𝑟𝑜𝑟 𝑂𝑐𝑐𝑢𝑟𝑟𝑒𝑑 𝑊ℎ𝑖𝑙𝑒 𝐶𝑜𝑛𝑣𝑒𝑟𝑡𝑖𝑛𝑔`);
         await M.reply(sticker, MessageType.sticker, Mimetype.webp)
     }
 }
