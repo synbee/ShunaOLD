@@ -27,7 +27,7 @@ export default class EventHandler {
 			pfp = await this.client.getProfilePicture(user);
 		} catch (err) {
 			pfp =
-				"https://upload.wikimedia.org/wikipedia/commons/a/ac/Default_pfp.jpg";
+				"https://www.linkpicture.com/q/pfp.jpg";
 		}
 		console.log(event.action);
 		const groupData = await this.client.groupMetadata(event.jid);
@@ -72,7 +72,7 @@ export default class EventHandler {
 				.setText("member-count", `- ${memberCount} member !`)
 				.setText("title", "hello")
 				.setText("message", `welcome to ${group.subject}`)
-				.setBackground("https://i.ibb.co/8B6Q84n/LTqHsfYS.jpg")
+				.setBackground("https://www.linkpicture.com/q/Wlcm-BG.jpg")
 				.toAttachment();
 			return void (await this.client.sendMessage(
 				event.jid,
