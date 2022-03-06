@@ -104,7 +104,7 @@ export default class EventHandler {
 				.setText("member-count", `- ${memberCount} member !`)
 				.setText("message", `we're probably not gonna miss you`)
 				.setBackground(
-					"https://images.unsplash.com/photo-1554050857-c84a8abdb5e2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8&w=1000&q=80"
+					"https://www.linkpicture.com/q/Goodbye-BG.jpg"
 				)
 				.toAttachment();
 			return void (await this.client.sendMessage(
