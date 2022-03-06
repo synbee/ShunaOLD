@@ -120,9 +120,9 @@ export default class EventHandler {
 			));
 		}
 		if (promote) {
-			const text = `Congratulations *@${
+			const text = 𝐂𝐨𝐧𝐠𝐫𝐚𝐭𝐮𝐥𝐚𝐭𝐢𝐨𝐧𝐬 *@${
 				event.participants[0].split("@")[0]
-			}*, you're now an admin.`;
+			}*, 𝐲𝐨𝐮'𝐫𝐞 𝐧𝐨𝐰 𝐚𝐧 𝐚𝐝𝐦𝐢𝐧.`;
 			return void this.client.sendMessage(
 				event.jid,
 				text,
@@ -131,9 +131,9 @@ export default class EventHandler {
 			);
 		}
 		if (demote) {
-			const text = `Ara Ara looks like *@${
+			const text = `𝐀𝐰𝐰 𝐋𝐨𝐨𝐤𝐬 𝐥𝐢𝐤𝐞 *@${
 				event.participants[0].split("@")[0]
-			}* got demoted.`;
+			}* 𝐠𝐨𝐭 𝐝𝐞𝐦𝐨𝐭𝐞𝐝.`;
 			return void this.client.sendMessage(
 				event.jid,
 				text,
