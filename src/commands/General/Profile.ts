@@ -91,11 +91,11 @@ export default class Command extends BaseCommand {
             MessageType.image,
             undefined,
             undefined,
-            `🏮 *Username: ${username}*\n\n🎗️ *About: ${
+            `🦄 𝐔𝐬𝐞𝐫𝐧𝐚𝐦𝐞: ${username}\n\n🍹 𝐀𝐛𝐨𝐮𝐭: ${
                 (await this.client.getStatus(user)).status || 'None'
-            }*\n\n〽️ *Level: ${level}*\n\n⭐ *Exp: ${exp || 0}*\n\n💫 *Role: ${role}*\n\n👑 *Admin: ${
+            }\n\n🔖 𝐋𝐞𝐯𝐞𝐥: ${level}\n\n🍥 𝐄𝐱𝐩: ${exp || 0}\n\n💮 𝐑𝐨𝐥𝐞: ${role}\n\n🎖️ 𝐀𝐝𝐦𝐢𝐧: ${
                 M.groupMetadata?.admins?.includes(user) || false
-            }*\n\n✖ *Ban: ${(await this.client.getUser(user)).ban || false}*`
+            }\n\n🟣 𝐁𝐚𝐧: ${(await this.client.getUser(user)).ban || false}`
         )
     }
 }
