@@ -27,7 +27,7 @@ export default class Command extends BaseCommand {
 			{
 				quoted: M.WAMessage,
 				mimetype: Mimetype.gif,
-				caption: `🌸 𝐒𝐇𝐔𝐍𝐀 🌸\n\n🌺 𝐀 𝐖𝐞𝐞𝐛𝐨 𝐁𝐨𝐭𝐭𝐨 𝐰𝐢𝐭𝐡 𝐥𝐨𝐭𝐬 𝐨𝐟 𝐀𝐧𝐢𝐦𝐞 𝐅𝐞𝐚𝐭𝐮𝐫𝐞𝐬.\n\n💎 𝑺𝒀𝑵𝑩𝑬𝑬\n\n❄️ 𝐶𝑂𝑁𝑇𝐴𝐶𝑇: wa.me/+918075922832 \n`,
+				caption: `🌸 𝐒𝐇𝐔𝐍𝐀 🌸\n\n🌺 𝐀 𝐖𝐞𝐞𝐛𝐨 𝐁𝐨𝐭𝐭𝐨 𝐰𝐢𝐭𝐡 𝐥𝐨𝐭𝐬 𝐨𝐟 𝐀𝐧𝐢𝐦𝐞 𝐅𝐞𝐚𝐭𝐮𝐫𝐞𝐬.\n\n💎 𝐓𝐨 𝐚𝐝𝐝 𝐭𝐡𝐢𝐬 𝐛𝐨𝐭 𝐭𝐨 𝐲𝐨𝐮𝐫 𝐠𝐫𝐨𝐮𝐩\n\n❄️ 𝐶𝑂𝑁𝑇𝐴𝐶𝑇: wa.me/+918075922832 \n`,
 			}
 		);
 	};
