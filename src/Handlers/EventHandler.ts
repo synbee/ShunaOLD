@@ -27,7 +27,7 @@ export default class EventHandler {
 			pfp = await this.client.getProfilePicture(user);
 		} catch (err) {
 			pfp =
-				"https://upload.wikimedia.org/wikipedia/commons/a/ac/Default_pfp.jpg";
+				"https://www.linkpicture.com/q/pfp.jpg";
 		}
 		console.log(event.action);
 		const groupData = await this.client.groupMetadata(event.jid);
@@ -63,7 +63,7 @@ export default class EventHandler {
 				.setMemberCount(memberCount)
 				.setGuildName(group.subject)
 				.setAvatar(pfp)
-				.setColor("border", "#FFC0CB")
+				.setColor("border", "#FF00FF")
 				.setColor("username-box", "#FFFFFF")
 				.setColor("discriminator-box", "#FFFFFF")
 				.setColor("message-box", "#FFFFFF")
@@ -72,18 +72,18 @@ export default class EventHandler {
 				.setText("member-count", `- ${memberCount} member !`)
 				.setText("title", "hello")
 				.setText("message", `welcome to ${group.subject}`)
-				.setBackground("https://i.ibb.co/8B6Q84n/LTqHsfYS.jpg")
+				.setBackground("https://www.linkpicture.com/q/Wlcm-BG.jpg")
 				.toAttachment();
 			return void (await this.client.sendMessage(
 				event.jid,
 				welcome.toBuffer(),
 				MessageType.image,
 				{
-					caption: `- ${group.subject || "___"} -\n\n💠 *𝐆𝐫𝐨𝐮𝐩 𝐃𝐞𝐬𝐜𝐫𝐢𝐩𝐭𝐢𝐨𝐧:*\n${
+					caption: `- ${group.subject || "___"} -\n\n💎 𝐆𝐫𝐨𝐮𝐩 𝐃𝐞𝐬𝐜𝐫𝐢𝐩𝐭𝐢𝐨𝐧:\n${
 						group.desc
-					}\n\n𝐇𝐨𝐩𝐞 𝐲𝐨𝐮 𝐟𝐨𝐥𝐥𝐨𝐰 𝐭𝐡𝐞 𝐫𝐮𝐥𝐞𝐬 𝐚𝐧𝐝 𝐡𝐚𝐯𝐞 𝐟𝐮𝐧!\n\n*‣ ${event.participants
+					}\n\n𝐇𝐨𝐩𝐞 𝐲𝐨𝐮 𝐟𝐨𝐥𝐥𝐨𝐰 𝐭𝐡𝐞 𝐫𝐮𝐥𝐞𝐬 𝐚𝐧𝐝 𝐡𝐚𝐯𝐞 𝐟𝐮𝐧!\n\n‣ ${event.participants
 						.map((jid) => `@${jid.split("@")[0]}`)
-						.join(", ")}*`,
+						.join(", ")}`,
 					contextInfo,
 				}
 			));
@@ -104,7 +104,7 @@ export default class EventHandler {
 				.setText("member-count", `- ${memberCount} member !`)
 				.setText("message", `we're probably not gonna miss you`)
 				.setBackground(
-					"https://images.unsplash.com/photo-1554050857-c84a8abdb5e2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8&w=1000&q=80"
+					"https://www.linkpicture.com/q/Goodbye-BG.jpg"
 				)
 				.toAttachment();
 			return void (await this.client.sendMessage(
@@ -112,17 +112,17 @@ export default class EventHandler {
 				goodbye.toBuffer(),
 				MessageType.image,
 				{
-					caption: `𝐒𝐚𝐲𝐨𝐧𝐚𝐫𝐚 *@${
+					caption: `𝐒𝐚𝐲𝐨𝐧𝐚𝐫𝐚 @${
 						event.participants[0].split("@")[0]
-					}* 👋🏻, 𝐰𝐞'𝐫𝐞 𝐩𝐫𝐨𝐛𝐚𝐛𝐥𝐲 𝐧𝐨𝐭 𝐠𝐨𝐧𝐧𝐚 𝐦𝐢𝐬𝐬 𝐲𝐨𝐮.`,
+					} 👋🏻, 𝐰𝐞'𝐫𝐞 𝐩𝐫𝐨𝐛𝐚𝐛𝐥𝐲 𝐧𝐨𝐭 𝐠𝐨𝐧𝐧𝐚 𝐦𝐢𝐬𝐬 𝐲𝐨𝐮.`,
 					contextInfo,
 				}
 			));
 		}
 		if (promote) {
-			const text = `𝐂𝐨𝐧𝐠𝐫𝐚𝐭𝐮𝐥𝐚𝐭𝐢𝐨𝐧𝐬 *@${
+			const text = `𝐂𝐨𝐧𝐠𝐫𝐚𝐭𝐮𝐥𝐚𝐭𝐢𝐨𝐧𝐬 @${
 				event.participants[0].split("@")[0]
-			}*, 𝐲𝐨𝐮'𝐫𝐞 𝐧𝐨𝐰 𝐚𝐧 𝐚𝐝𝐦𝐢𝐧.`;
+			}, 𝐲𝐨𝐮'𝐫𝐞 𝐧𝐨𝐰 𝐚𝐧 𝐚𝐝𝐦𝐢𝐧.`;
 			return void this.client.sendMessage(
 				event.jid,
 				text,
@@ -131,9 +131,9 @@ export default class EventHandler {
 			);
 		}
 		if (demote) {
-			const text = `𝐎𝐰𝐰 𝐥𝐨𝐨𝐤𝐬 𝐥𝐢𝐤𝐞 *@${
+			const text = `𝐎𝐰𝐰 𝐥𝐨𝐨𝐤𝐬 𝐥𝐢𝐤𝐞 @${
 				event.participants[0].split("@")[0]
-			}* 𝐠𝐨𝐭 𝐝𝐞𝐦𝐨𝐭𝐞𝐝.`;
+			} 𝐠𝐨𝐭 𝐝𝐞𝐦𝐨𝐭𝐞𝐝.`;
 			return void this.client.sendMessage(
 				event.jid,
 				text,
