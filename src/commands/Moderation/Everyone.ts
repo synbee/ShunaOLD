@@ -91,9 +91,9 @@ export default class Command extends BaseCommand {
         if (k.isAdmin) continue;
         metadata.others.push(k.jid);
       }
-      let text = `*⑅─── ∘°❉ ${M.groupMetadata?.subject} ❉°∘ ───⑅\n❀ 𝐌𝐞𝐦𝐛𝐞𝐫𝐬: ${
+      let text = `🌺 ${M.groupMetadata?.subject} 🌺\n🌸 𝐌𝐞𝐦𝐛𝐞𝐫𝐬: ${
         members.length
-      }\n✿ 𝐀𝐧𝐧𝐨𝐮𝐧𝐜𝐞𝐫: @${M.sender.jid.split("@")[0]}\n✥ 𝐓𝐚𝐠𝐬:`;
+      }\n🍁 𝐀𝐧𝐧𝐨𝐮𝐧𝐜𝐞𝐫: @${M.sender.jid.split("@")[0]}\n🌼 𝐓𝐚𝐠𝐬:`;
       if (metadata.mods.length > 0) {
         for (const Mods of metadata.mods) {
           text += `\n🏅 *@${Mods.split("@")[0]}*`;
