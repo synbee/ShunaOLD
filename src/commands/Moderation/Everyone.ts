@@ -40,7 +40,7 @@ export default class Command extends BaseCommand {
     if (flags.includes("--s") || flags.includes("--sticker")) {
       const sticker: any = await new Sticker(random, {
         pack: "READ QUOTED MESSAGE",
-        author: "🌸 𝐒𝐇𝐔𝐍𝐀 🌸",
+        author: "S H U N A",
         quality: 90,
         type: "default",
         categories: ["🎊"],
