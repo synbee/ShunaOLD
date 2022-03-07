@@ -61,7 +61,7 @@ export default class Command extends BaseCommand {
         M.groupMetadata?.participants.map((user) => user.jid)
         // eslint-disable-next-line @typescript-eslint/no-explicit-any
       ).catch((reason: any) =>
-        M.reply(`✖️ An error occurred, Reason: ${reason}`)
+        M.reply(`🎐 𝑨𝒏 𝒆𝒓𝒓𝒐𝒓 𝒐𝒄𝒄𝒖𝒓𝒓𝒆𝒅, 𝑹𝒆𝒂𝒔𝒐𝒏: ${reason}`)
       ));
     } else {
       interface metadata {
