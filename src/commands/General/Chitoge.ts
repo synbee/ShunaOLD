@@ -9,20 +9,20 @@ import { ISimplifiedMessage } from "../../typings";
 export default class Command extends BaseCommand {
 	constructor(client: WAClient, handler: MessageHandler) {
 		super(client, handler, {
-			command: "chitoge",
+			command: "shuna",
 			description: "Displays the info",
 			category: "general",
-			usage: `${client.config.prefix}chitoge`,
+			usage: `${client.config.prefix}shuna`,
 			baseXp: 200,
 		});
 	}
 
 	run = async (M: ISimplifiedMessage): Promise<void> => {
-		const chitoge =
-			"https://media.tenor.com/videos/80f557139bc3a0857f6a705da6990fdc/mp4";
+		const shuna =
+			"https://user-images.githubusercontent.com/97864273/156913350-6426b182-c65b-4971-b964-c8d1849f2c41.mp4";
 		return void this.client.sendMessage(
 			M.from,
-			{ url: chitoge },
+			{ url: shuna },
 			MessageType.video,
 			{
 				quoted: M.WAMessage,
