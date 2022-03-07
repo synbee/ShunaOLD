@@ -79,9 +79,9 @@ export default class EventHandler {
 				welcome.toBuffer(),
 				MessageType.image,
 				{
-					caption: `- ${group.subject || "___"} -\n\n💠 *Group Description:*\n${
+					caption: `- ${group.subject || "___"} -\n\n💠 *𝐆𝐫𝐨𝐮𝐩 𝐃𝐞𝐬𝐜𝐫𝐢𝐩𝐭𝐢𝐨𝐧:*\n${
 						group.desc
-					}\n\nHope you follow the rules and have fun!\n\n*‣ ${event.participants
+					}\n\n𝐇𝐨𝐩𝐞 𝐲𝐨𝐮 𝐟𝐨𝐥𝐥𝐨𝐰 𝐭𝐡𝐞 𝐫𝐮𝐥𝐞𝐬 𝐚𝐧𝐝 𝐡𝐚𝐯𝐞 𝐟𝐮𝐧!\n\n*‣ ${event.participants
 						.map((jid) => `@${jid.split("@")[0]}`)
 						.join(", ")}*`,
 					contextInfo,
@@ -112,17 +112,17 @@ export default class EventHandler {
 				goodbye.toBuffer(),
 				MessageType.image,
 				{
-					caption: `Goodbye *@${
+					caption: `𝐒𝐚𝐲𝐨𝐧𝐚𝐫𝐚 *@${
 						event.participants[0].split("@")[0]
-					}* 👋🏻, we're probably not gonna miss you.`,
+					}* 👋🏻, 𝐰𝐞'𝐫𝐞 𝐩𝐫𝐨𝐛𝐚𝐛𝐥𝐲 𝐧𝐨𝐭 𝐠𝐨𝐧𝐧𝐚 𝐦𝐢𝐬𝐬 𝐲𝐨𝐮.`,
 					contextInfo,
 				}
 			));
 		}
 		if (promote) {
-			const text = `Congratulations *@${
+			const text = `𝐂𝐨𝐧𝐠𝐫𝐚𝐭𝐮𝐥𝐚𝐭𝐢𝐨𝐧𝐬 *@${
 				event.participants[0].split("@")[0]
-			}*, you're now an admin.`;
+			}*, 𝐲𝐨𝐮'𝐫𝐞 𝐧𝐨𝐰 𝐚𝐧 𝐚𝐝𝐦𝐢𝐧.`;
 			return void this.client.sendMessage(
 				event.jid,
 				text,
@@ -131,9 +131,9 @@ export default class EventHandler {
 			);
 		}
 		if (demote) {
-			const text = `Ara Ara looks like *@${
+			const text = `𝐎𝐰𝐰 𝐥𝐨𝐨𝐤𝐬 𝐥𝐢𝐤𝐞 *@${
 				event.participants[0].split("@")[0]
-			}* got demoted.`;
+			}* 𝐠𝐨𝐭 𝐝𝐞𝐦𝐨𝐭𝐞𝐝.`;
 			return void this.client.sendMessage(
 				event.jid,
 				text,
