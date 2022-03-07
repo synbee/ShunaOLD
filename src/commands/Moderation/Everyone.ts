@@ -55,7 +55,7 @@ export default class Command extends BaseCommand {
       return void (await M.reply(
         `⑅─── ∘°❉ ${M.groupMetadata?.subject} ❉°∘ ───⑅\n❀ 𝐌𝐞𝐦𝐛𝐞𝐫𝐬: ${
           members.length
-        }\n❀ 𝐀𝐧𝐧𝐨𝐮𝐧𝐜𝐞𝐫: @${M.sender.jid.split("@")[0]}\n✥ 𝐓𝐚𝐠𝐬: 𝐇𝐈𝐃𝐃𝐄𝐍`,
+        }\n✿ 𝐀𝐧𝐧𝐨𝐮𝐧𝐜𝐞𝐫: @${M.sender.jid.split("@")[0]}\n✥ 𝐓𝐚𝐠𝐬: 𝐇𝐈𝐃𝐃𝐄𝐍`,
         undefined,
         undefined,
         M.groupMetadata?.participants.map((user) => user.jid)
@@ -91,9 +91,9 @@ export default class Command extends BaseCommand {
         if (k.isAdmin) continue;
         metadata.others.push(k.jid);
       }
-      let text = `*🎀 𝐆𝐫𝐨𝐮𝐩: ${M.groupMetadata?.subject}*\n🎏 *𝐌𝐞𝐦𝐛𝐞𝐫𝐬: ${
+      let text = `*⑅─── ∘°❉ ${M.groupMetadata?.subject} ❉°∘ ───⑅\n❀ 𝐌𝐞𝐦𝐛𝐞𝐫𝐬: ${
         members.length
-      }*\n📢 *𝐀𝐧𝐧𝐨𝐮𝐧𝐜𝐞𝐫: @${M.sender.jid.split("@")[0]}*\n🧧 *𝐓𝐚𝐠𝐬:*`;
+      }\n✿ 𝐀𝐧𝐧𝐨𝐮𝐧𝐜𝐞𝐫: @${M.sender.jid.split("@")[0]}\n✥ 𝐓𝐚𝐠𝐬:`;
       if (metadata.mods.length > 0) {
         for (const Mods of metadata.mods) {
           text += `\n🏅 *@${Mods.split("@")[0]}*`;
@@ -110,7 +110,7 @@ export default class Command extends BaseCommand {
       if (metadata.others.length > 0) {
         text += `\n`;
         for (const others of metadata.others) {
-          text += `\n🎗 *@${others.split("@")[0]}*`;
+          text += `\n🌺 *@${others.split("@")[0]}*`;
         }
       }
       return void M.reply(
