@@ -17,25 +17,25 @@ export default class Command extends BaseCommand {
 
     run = async (M: ISimplifiedMessage): Promise<void> => {
         if (!(M.groupMetadata?.owner.split('@')[0] === M.sender.jid.split('@')[0]))
-            return void M.reply('Only the group owner can use this command')
+            return void M.reply('𝐎𝐧𝐥𝐲 𝐭𝐡𝐞 𝐠𝐫𝐨𝐮𝐩 𝐨𝐰𝐧𝐞𝐫 𝐜𝐚𝐧 𝐮𝐬𝐞 𝐭𝐡𝐢𝐬 𝐜𝐨𝐦𝐦𝐚𝐧𝐝')
         if (!M.groupMetadata?.admins?.includes(this.client.user.jid))
-            return void M.reply("How can I remove all of the members without being an admin?")
+            return void M.reply("𝐇𝐨𝐰 𝐜𝐚𝐧 𝐈 𝐫𝐞𝐦𝐨𝐯𝐞 𝐚𝐥𝐥 𝐨𝐟 𝐭𝐡𝐞 𝐦𝐞𝐦𝐛𝐞𝐫𝐬 𝐰𝐢𝐭𝐡𝐨𝐮𝐭 𝐛𝐞𝐢𝐧𝐠 𝐚𝐧 𝐚𝐝𝐦𝐢𝐧?")
         if (!this.purgeSet.has(M.groupMetadata?.id || '')) {
             this.addToPurge(M.groupMetadata?.id || '')
             return void M.reply(
-                "Are you sure? This will remove everyone from the group chat. Use this command again if you'd like to proceed"
+                "𝐀𝐫𝐞 𝐲𝐨𝐮 𝐬𝐮𝐫𝐞? 𝐓𝐡𝐢𝐬 𝐰𝐢𝐥𝐥 𝐫𝐞𝐦𝐨𝐯𝐞 𝐞𝐯𝐞𝐫𝐲𝐨𝐧𝐞 𝐟𝐫𝐨𝐦 𝐭𝐡𝐞 𝐠𝐫𝐨𝐮𝐩 𝐜𝐡𝐚𝐭. 𝐔𝐬𝐞 𝐭𝐡𝐢𝐬 𝐜𝐨𝐦𝐦𝐚𝐧𝐝 𝐚𝐠𝐚𝐢𝐧 𝐢𝐟 𝐲𝐨𝐮'𝐝 𝐥𝐢𝐤𝐞 𝐭𝐨 𝐩𝐫𝐨𝐜𝐞𝐞𝐝"
             )
         }
         M.groupMetadata.participants.map(async (user) => {
             if (!user.isAdmin)
-                await this.client.groupRemove(M.from, [user.jid]).catch(() => console.log('Failed to remove users'))
+                await this.client.groupRemove(M.from, [user.jid]).catch(() => console.log('𝐅𝐚𝐢𝐥𝐞𝐝 𝐭𝐨 𝐫𝐞𝐦𝐨𝐯𝐞 𝐮𝐬𝐞𝐫𝐬'))
         })
         // now remove all admins except yourself and the owner
         M.groupMetadata.admins.map(async (user) => {
             if (user !== M.sender.jid && user !== this.client.user.jid)
-                await this.client.groupRemove(M.from, [user]).catch(() => console.log('error removing admin'))
+                await this.client.groupRemove(M.from, [user]).catch(() => console.log('𝐞𝐫𝐫𝐨𝐫 𝐫𝐞𝐦𝐨𝐯𝐢𝐧𝐠 𝐚𝐝𝐦𝐢𝐧'))
         })
-        await M.reply('Done!').catch(() => console.log('Failed to send message'))
+        await M.reply('𝐃𝐨𝐧𝐞!').catch(() => console.log('𝐅𝐚𝐢𝐥𝐞𝐝 𝐭𝐨 𝐬𝐞𝐧𝐝 𝐦𝐞𝐬𝐬𝐚𝐠𝐞'))
         this.client.groupLeave(M.from)
     }
 
