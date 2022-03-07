@@ -39,8 +39,8 @@ export default class Command extends BaseCommand {
     const random = stickers[Math.floor(Math.random() * stickers.length)];
     if (flags.includes("--s") || flags.includes("--sticker")) {
       const sticker: any = await new Sticker(random, {
-        pack: "READ QUOTED MESSAGE",
-        author: "🌟 Chitoge 🌟",
+        pack: "𝘙𝘌𝘈𝘋 𝘘𝘜𝘖𝘛𝘌𝘋 𝘔𝘌𝘚𝘚𝘈𝘎𝘌",
+        author: "S H U N A",
         quality: 90,
         type: "default",
         categories: ["🎊"],
