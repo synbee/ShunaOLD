@@ -27,7 +27,7 @@ export default class Command extends BaseCommand {
 			{
 				quoted: M.WAMessage,
 				mimetype: Mimetype.gif,
-				caption: `🌟 *Chitoge* 🌟\n\n🍀 *Description: A WhatsApp Bot With Rich Anime Features.*\n\n🌐 *URL: https://github.com/ShineiIchijo/Chitoge* \n\n 📒 *Guide: https://github.com/ShineiIchijo/Chitoge-Guides* \n`,
+				caption: `🌺 𝐒𝐇𝐔𝐍𝐀 🌺\n\n🌸 𝐃𝐞𝐬𝐜𝐫𝐢𝐩𝐭𝐢𝐨𝐧: 𝐀 𝐖𝐞𝐞𝐛 𝐖𝐡𝐚𝐭𝐬𝐀𝐩𝐩 𝐁𝐨𝐭 𝐖𝐢𝐭𝐡 𝐋𝐨𝐭𝐬 𝐎𝐟  𝐀𝐧𝐢𝐦𝐞 𝐅𝐞𝐚𝐭𝐮𝐫𝐞𝐬.\n\n🍹 𝐓𝐨 𝐚𝐝𝐝 𝐛𝐨𝐭 𝐭𝐨 𝐲𝐨𝐮𝐫 𝐠𝐫𝐨𝐮𝐩 \n\n 📒 𝐂𝐨𝐧𝐭𝐚𝐜𝐭 𝐎𝐰𝐧𝐞𝐫: wa.me/+918075922832 \n`,
 			}
 		);
 	};
