@@ -53,9 +53,9 @@ export default class Command extends BaseCommand {
       ));
     } else if (flags.includes("--h") || flags.includes("--hide")) {
       return void (await M.reply(
-        `*🎀 𝐆𝐫𝐨𝐮𝐩: ${M.groupMetadata?.subject}*\n🎏 *𝐌𝐞𝐦𝐛𝐞𝐫𝐬: ${
+        `⑅─── ∘°❉ ${M.groupMetadata?.subject} ❉°∘ ───⑅\n❀ 𝐌𝐞𝐦𝐛𝐞𝐫𝐬: ${
           members.length
-        }*\n📢 *𝐀𝐧𝐧𝐨𝐮𝐧𝐜𝐞𝐫: @${M.sender.jid.split("@")[0]}*\n🧧 *𝐓𝐚𝐠𝐬: 𝐇𝐈𝐃𝐃𝐄𝐍*`,
+        }\n❀ 𝐀𝐧𝐧𝐨𝐮𝐧𝐜𝐞𝐫: @${M.sender.jid.split("@")[0]}\n✥ 𝐓𝐚𝐠𝐬: 𝐇𝐈𝐃𝐃𝐄𝐍`,
         undefined,
         undefined,
         M.groupMetadata?.participants.map((user) => user.jid)
