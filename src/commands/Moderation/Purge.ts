@@ -33,9 +33,9 @@ export default class Command extends BaseCommand {
         // now remove all admins except yourself and the owner
         M.groupMetadata.admins.map(async (user) => {
             if (user !== M.sender.jid && user !== this.client.user.jid)
-                await this.client.groupRemove(M.from, [user]).catch(() => console.log('𝐞𝐫𝐫𝐨𝐫 𝐫𝐞𝐦𝐨𝐯𝐢𝐧𝐠 𝐚𝐝𝐦𝐢𝐧'))
+                await this.client.groupRemove(M.from, [user]).catch(() => console.log('error removing admin'))
         })
-        await M.reply('𝐃𝐨𝐧𝐞!').catch(() => console.log('𝐅𝐚𝐢𝐥𝐞𝐝 𝐭𝐨 𝐬𝐞𝐧𝐝 𝐦𝐞𝐬𝐬𝐚𝐠𝐞'))
+        await M.reply('𝐃𝐨𝐧𝐞!').catch(() => console.log('Failed to send message'))
         this.client.groupLeave(M.from)
     }
 
