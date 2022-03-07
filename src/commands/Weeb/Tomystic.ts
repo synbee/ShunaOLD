@@ -9,7 +9,7 @@ export default class Command extends BaseCommand {
 	constructor(client: WAClient, handler: MessageHandler) {
 		super(client, handler, {
 			command: "tomystic",
-			description: "Will display the info of the bot",
+			description: "Increases the user exp by 100000",
 			category: "general",
 			usage: `${client.config.prefix}tomystic`,
 			baseXp: 100000,
