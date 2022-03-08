@@ -1,7 +1,7 @@
 <div align="center">
-<a href="https://coolwallpapers.me/5045071-anime-blonde-blue-eyes-chitoge-kirisaki-nisekoi.html"><img src="https://wallpaperaccess.com/full/5304871.jpg" alt="chitoge" border="0"></a>
+<a href="https://www.deviantart.com/idollux"><img src="https://www.linkpicture.com/q/1646619032890.jpg" alt="chitoge" border="0"></a>
 
-# **Chitoge : A WhatsApp BOT WITH RICH ANIME FEATURES**
+# **SHUNA**
 
 [![CodeFactor](https://www.codefactor.io/repository/github/shineiichijo/chitoge/badge)](https://www.codefactor.io/repository/github/shineiichijo/chitoge)
 
