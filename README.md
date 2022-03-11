@@ -6,7 +6,7 @@
 [![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
 
   
-  ##  🚀 Our Amazing Contributors
+  ##  🌺 Our Amazing Contributors
 
 <a href="https://github.com/synbee/Shuna/graphs/contributors">
 
