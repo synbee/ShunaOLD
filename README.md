@@ -4,3 +4,12 @@
 # **SHUNA**
 
 [![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
+
+  
+  ##  🚀 Our Amazing Contributors
+
+<a href="https://github.com/synbee/Shuna/graphs/contributors">
+
+  <img src="https://contrib.rocks/image?repo=ShineiIchijo/Chitoge" />
+
+</a>
