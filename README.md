@@ -10,6 +10,6 @@
 
 <a href="https://github.com/synbee/Shuna/graphs/contributors">
 
-  <img src="https://contrib.rocks/image?repo=ShineiIchijo/Chitoge" />
+  <img src="" />
 
 </a>
