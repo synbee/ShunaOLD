@@ -32,7 +32,7 @@ export default class Command extends BaseCommand {
 		try {
 			pfp = await this.client.getProfilePicture(user);
 		} catch (err) {
-			M.reply(`Profile Picture not Accessible of ${username}`);
+			M.reply(`𝐏𝐫𝐨𝐟𝐢𝐥𝐞 𝐏𝐢𝐜𝐭𝐮𝐫𝐞 𝐧𝐨𝐭 𝐀𝐜𝐜𝐞𝐬𝐬𝐢𝐛𝐥𝐞 𝐨𝐟 ${username}`);
 			pfp =
 				"https://upload.wikimedia.org/wikipedia/commons/a/ac/Default_pfp.jpg";
 		}
