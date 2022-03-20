@@ -58,28 +58,28 @@ export default class Command extends BaseCommand {
 				} else if (exp < 100000) {
 					role = "💎 Supreme";
 				} else if (exp < 125000) {
-		            role = "❄️ Mystic";
-		        } else if (exp < 150000) {
-		            role = "🧿 Majin";
-		        } else if (exp < 175000) {
-		            role = "🧚‍♀️ Fairy";
-		        } else if (exp < 200000) {
-		            role = "♠️ Fallen Angel";
-		        } else if (exp < 225000) {
-		            role = "💥 Orc Disaster";
-		        } else if (exp < 250000) {
-		            role = "🛡️ True Hero";
-		        } else if (exp < 275000) {
-		            role = "🩸 Vampire";
-		        } else if (exp < 300000) {
-		            role = "⚡ Demon Peer";
-		        } else if (exp < 325000) {
-		            role = "🔥 Dragon";
-		        } else if (exp < 350000) {
-		            role = "🧧 Demon Lord";
-		        } else {
-			        role = "🐉 True Dragon";
-			    }
+		                        role = "❄️ Mystic";
+		                } else if (exp < 150000) {
+		                        role = "🧿 Majin";
+		                } else if (exp < 175000) {
+		                        role = "🧚‍♀️ Fairy";
+		                } else if (exp < 200000) {
+		                        role = "♠️ Fallen Angel";
+		                } else if (exp < 225000) {
+		                        role = "💥 Orc Disaster";
+		                } else if (exp < 250000) {
+		                        role = "🛡️ True Hero";
+		                } else if (exp < 275000) {
+		                        role = "🩸 Vampire";
+		                } else if (exp < 300000) {
+		                        role = "⚡ Demon Peer";
+		                } else if (exp < 325000) {
+		                        role = "🔥 Dragon";
+		                } else if (exp < 350000) {
+		                        role = "🧧 Demon Lord";
+		                } else {
+			                role = "🐉 True Dragon";
+			        }
 
 				let level: number;
 				if (exp < 500) {
@@ -101,27 +101,27 @@ export default class Command extends BaseCommand {
 				} else if (exp < 100000) {
 					level = 9;
 				} else if (exp < 125000) {
-		            level = 10;
-		        } else if (exp < 150000) {
-		            level = 11;
-		        } else if (exp < 175000) {
-		            level = 12;
-		        } else if (exp < 200000) {
-		            level = 13;
-		        } else if (exp < 225000) {
-		            level = 14;
-		        } else if (exp < 250000) {
-		            level = 15;
-		        } else if (exp < 275000) {
-		            level = 16;
-		        } else if (exp < 300000) {
-		            level = 17;
-		        } else if (exp < 325000) {
-		            level = 18;
-		        } else if (exp < 350000) {
-		            level = 19;
-		        } else {
-			        level = 20;
+		                        level = 10;
+		                } else if (exp < 150000) {
+		                        level = 11;
+		                } else if (exp < 175000) {
+		                        level = 12;
+		                } else if (exp < 200000) {
+		                        level = 13;
+		                } else if (exp < 225000) {
+		                        level = 14;
+		                } else if (exp < 250000) {
+		                        level = 15;
+		                } else if (exp < 275000) {
+		                        level = 16;
+		                } else if (exp < 300000) {
+		                        level = 17;
+		                } else if (exp < 325000) {
+		                        level = 18;
+		                } else if (exp < 350000) {
+		                        level = 19;
+		                } else {
+			                level = 20;
 				}
         await M.reply(
             await request.buffer(
