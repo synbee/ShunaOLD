@@ -55,8 +55,8 @@ export default class Command extends BaseCommand {
         quoted: M.WAMessage,
         contextInfo: {
           externalAdReply: {
-            title: videos[0].title.substr(0, 30),
-            body: `Author : ${videos[0].author.name.substr(
+            title: videos[0].title.slice(0, 30),
+            body: `Author : ${videos[0].author.name.slice(
               0,
               20
             )}\n🌺 𝐒𝐇𝐔𝐍𝐀 🌺`,
